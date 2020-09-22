@@ -7,7 +7,6 @@
  * @license MIT
  *
  **/
-
 class EasyHTTP {
   // Make an HTTP GET Request 
   async get(url) {
@@ -43,7 +42,6 @@ class EasyHTTP {
     const resData = await response.json();
     return resData;
   }
-
   // Make an HTTP DELETE Request
   async delete(url) {
     const response = await fetch(url, {
@@ -52,10 +50,8 @@ class EasyHTTP {
         'Content-type': 'application/json'
       }
     });
-
     const resData = await 'Resource Deleted...';
     return resData;
   }
-
 }
 export const http = new EasyHTTP();
